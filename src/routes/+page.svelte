@@ -25,8 +25,8 @@
     </div>
     <div class="hero-photo">
       <img
-        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&auto=format&fit=crop&q=80"
-        alt="Folded knitwear and shirts in a daylit room"
+        src="https://images.unsplash.com/photo-1542060748-10c28b62716f?w=1200&auto=format&fit=crop&q=80"
+        alt="A rack of mixed shirts, denim and knitwear in a small store"
         loading="eager"
       />
     </div>
