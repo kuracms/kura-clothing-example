@@ -12,7 +12,7 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">{data.page?.subtitle ?? "Brooklyn workwear, made in the USA"}</p>
+      <p class="eyebrow">{data.page?.subtitle ?? "A small Brooklyn clothing label"}</p>
       <h1>{data.page?.title ?? "Marlow Clothing"}</h1>
       <p class="hero-sub">
         Twelve pieces a season, made in small runs at workshops in Pennsylvania and North Carolina.
