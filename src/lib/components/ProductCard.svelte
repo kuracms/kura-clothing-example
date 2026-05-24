@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { formatGbp, type Product } from "$lib/kura";
+  import { formatUsd, type Product } from "$lib/kura";
 
   let { product }: { product: Product } = $props();
 </script>
@@ -18,6 +18,6 @@
       <p class="p-card-name">{product.name}</p>
       <p class="p-card-meta">{product.colour}</p>
     </div>
-    <div class="p-card-price">{formatGbp(product.price_gbp)}</div>
+    <div class="p-card-price">{formatUsd(product.price_usd)}</div>
   </div>
 </a>

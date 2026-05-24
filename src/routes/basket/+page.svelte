@@ -1,6 +1,6 @@
 <script lang="ts">
   import { basket } from "$lib/basket.svelte";
-  import { formatGbp } from "$lib/kura";
+  import { formatUsd } from "$lib/kura";
 
   let placed = $state(false);
 
@@ -65,7 +65,7 @@
                   >Remove</button>
                 </div>
               </div>
-              <div style="font-weight: 500;">{formatGbp(line.price_gbp * line.qty)}</div>
+              <div style="font-weight: 500;">{formatUsd(line.price_usd * line.qty)}</div>
             </div>
           {/each}
         </div>
@@ -74,7 +74,7 @@
           <h3 style="margin: 0 0 1.2rem; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase;">Summary</h3>
           <div class="basket-summary-row">
             <span>Subtotal</span>
-            <span>{formatGbp(basket.total)}</span>
+            <span>{formatUsd(basket.total)}</span>
           </div>
           <div class="basket-summary-row">
             <span>Shipping</span>
@@ -82,7 +82,7 @@
           </div>
           <div class="basket-summary-row total">
             <span>Total</span>
-            <span>{formatGbp(basket.total)}</span>
+            <span>{formatUsd(basket.total)}</span>
           </div>
           <button type="button" class="btn" style="width: 100%; margin-top: 1.2rem;" onclick={checkout}>
             Checkout

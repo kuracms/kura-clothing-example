@@ -8,7 +8,7 @@ export interface BasketLine {
   name: string;
   size: string;
   colour: string;
-  price_gbp: number;
+  price_usd: number;
   photo: string;
   qty: number;
 }
@@ -48,7 +48,7 @@ function createBasket() {
       return lines.reduce((sum, l) => sum + l.qty, 0);
     },
     get total() {
-      return lines.reduce((sum, l) => sum + l.qty * l.price_gbp, 0);
+      return lines.reduce((sum, l) => sum + l.qty * l.price_usd, 0);
     },
     add(line: Omit<BasketLine, "qty">, qty = 1) {
       const idx = lines.findIndex(

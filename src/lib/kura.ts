@@ -24,7 +24,7 @@ export interface Product {
   name: string;
   sku: string;
   category: Category;
-  price_gbp: number;
+  price_usd: number;
   description: string;
   sizes: string;
   colour: string;
@@ -164,10 +164,10 @@ export function renderMarkdown(md: string): string {
   return marked.parse(md, { async: false }) as string;
 }
 
-export function formatGbp(n: number): string {
-  return new Intl.NumberFormat("en-GB", {
+export function formatUsd(n: number): string {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "GBP",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(n);
 }

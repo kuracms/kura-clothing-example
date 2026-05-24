@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { formatGbp, parseSizes } from "$lib/kura";
+  import { formatUsd, parseSizes } from "$lib/kura";
   import { basket } from "$lib/basket.svelte";
 
   let { data } = $props();
@@ -21,7 +21,7 @@
       name: p.name,
       size: selectedSize || "-",
       colour: p.colour,
-      price_gbp: p.price_gbp,
+      price_usd: p.price_usd,
       photo: p.photo,
     });
     message = `Added to basket - ${p.name}${selectedSize ? ` (${selectedSize})` : ""}.`;
@@ -40,7 +40,7 @@
   <div class="pdp-info">
     <p class="eyebrow">{p.category}</p>
     <h1>{p.name}</h1>
-    <p class="pdp-price">{formatGbp(p.price_gbp)}</p>
+    <p class="pdp-price">{formatUsd(p.price_usd)}</p>
     <p class="pdp-desc">{p.description}</p>
 
     {#if sizes.length > 0}
