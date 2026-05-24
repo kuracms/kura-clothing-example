@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kura-clothing-example",
+  "main": ".svelte-kit/cloudflare/_worker.js",
+  "compatibility_date": "2025-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".svelte-kit/cloudflare",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "KURA_BASE_URL": "https://kuracms.com",
+    "KURA_PROJECT": "clothing",
+    "KURA_TOKEN": "kr_live_zpsUBRoguOCJlNC96vOYqM93rtTKwoP"
+  },
+  "routes": [
+    { "pattern": "clothing.kuracms.com", "custom_domain": true, "zone_name": "kuracms.com" }
+  ]
+}
