@@ -24,11 +24,6 @@
     <p class="eyebrow">{data.collection.subtitle ?? "Collection"}</p>
     <h1 style="margin: 0.4rem 0 1rem;">{data.collection.name}</h1>
     <p style="color: var(--ink-soft); font-size: 1.05rem;">{data.collection.intro}</p>
-    <div class="callout">
-      Showing all in-stock pieces. Per-collection tagging lands in the next
-      kura schema update - this page will then show only the pieces tagged to
-      {data.collection.name}.
-    </div>
   </div>
 </section>
 

@@ -155,7 +155,7 @@ export async function fetchPage(
   platform: App.Platform | undefined,
   slug: string,
 ): Promise<Page | null> {
-  const r = await kuraFetch<KuraListResponse<Page>>(fetchFn, platform, `/page?limit=20`);
+  const r = await kuraFetch<KuraListResponse<Page>>(fetchFn, platform, `/global?limit=20`);
   return r.data.find((p) => p.slug === slug && p.published !== false) ?? null;
 }
 
